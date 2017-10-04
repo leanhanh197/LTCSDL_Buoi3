@@ -118,6 +118,32 @@ namespace BaiTH3
                 DisConnect();
             }
             return list;
-        } // End of GetData
+        }
+
+        private void btThem_Click(object sender, EventArgs e)
+        {
+            Connect();
+            string sql = "INSERT INTO LoaiSP values(" + txtMaLoai.Text + ", N'" + txtTenLoai.Text + "')";
+            SqlCommand cmd = new SqlCommand(sql, cn);
+            cmd.CommandType = CommandType.Text;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                dGVLoaiSanPham.DataSource = GetData();
+                MessageBox.Show("Đã thêm xong");
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Lỗi nhập loại sản phẩm\n" + ex.Message);
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show("Kết nối đã đóng \n" + ex.Message);
+            }
+            finally
+            {
+                DisConnect();
+            }
+        }
     }
 }
