@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaiTH3", "BaiTH3\BaiTH3.csproj", "{26A0F52F-8DA4-492F-BE22-803D74E07B26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26A0F52F-8DA4-492F-BE22-803D74E07B26}.Debug|x86.ActiveCfg = Debug|x86
+		{26A0F52F-8DA4-492F-BE22-803D74E07B26}.Debug|x86.Build.0 = Debug|x86
+		{26A0F52F-8DA4-492F-BE22-803D74E07B26}.Release|x86.ActiveCfg = Release|x86
+		{26A0F52F-8DA4-492F-BE22-803D74E07B26}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
