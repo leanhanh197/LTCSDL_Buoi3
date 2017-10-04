@@ -145,5 +145,31 @@ namespace BaiTH3
                 DisConnect();
             }
         }
+
+        private void btSua_Click(object sender, EventArgs e)
+        {
+            string strsql = "DELETE FROM LoaiSP WHERE MaLoaiSP = " + txtMaLoai.Text + "\n" +
+            "INSERT INTO LoaiSP values(" + txtMaLoai.Text + ", N'" + txtTenLoai.Text + "')";
+            SqlCommand cmd = new SqlCommand(strsql, cn);
+            Connect();
+            try
+            {
+                cmd.ExecuteNonQuery();
+                dGVLoaiSanPham.DataSource = GetData();
+                MessageBox.Show("Đã sửa xong");
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Lỗi nhập loại sản phẩm\n" + ex.Message);
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show("Kết nối đã đóng \n" + ex.Message);
+            }
+            finally
+            {
+                DisConnect();
+            }
+        }
     }
 }
